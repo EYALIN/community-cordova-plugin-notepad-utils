@@ -1,0 +1,19 @@
+{
+  "name": "community-cordova-plugin-notepad-utils",
+  "version": "1.0.0",
+  "main": "./types/index.d.ts",
+  "types": "./types/index.d.ts",
+  "readme": "README.md",
+  "repository": "EYALIN/community-cordova-plugin-notepad-utils/tree/master",
+  "homepage": "https://github.com/EYALIN/community-cordova-plugin-notepad-utils/tree/master",
+  "funding": "https://github.com/sponsors/EYALIN",
+  "bugs": "https://github.com/EYALIN/community-cordova-plugin-notepad-utils/issues",
+  "cordova": {
+    "id": "community-cordova-plugin-notepad-utils",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "description": "A comprehensive plugin for notepad/document utilities including clipboard, text stats, encryption, and more"
+}

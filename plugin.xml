@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="community-cordova-plugin-notepad-utils"
+        version="1.0.0">
+    <name>Cordova Plugin Notepad Utils</name>
+    <description>Comprehensive notepad/document utilities including clipboard, text stats, encryption, and more</description>
+    <license>MIT</license>
+    <keywords>cordova,plugin,notepad,clipboard,text,encryption,document,utilities</keywords>
+    <repo>https://github.com/eyalin/community-cordova-plugin-notepad-utils.git</repo>
+    <issue>https://github.com/eyalin/community-cordova-plugin-notepad-utils/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/plugin.js" name="NotepadUtilsPlugin">
+            <runs/>
+            <clobbers target="NotepadUtilsPlugin" />
+        </js-module>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="NotepadUtilsPlugin">
+                <param name="android-package" value="community.plugins.notepadutils.NotepadUtilsPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/NotepadUtilsPlugin.java" target-dir="src/community/plugins/notepadutils" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="NotepadUtilsPlugin" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="NotepadUtilsPlugin">
+                <param name="ios-package" value="NotepadUtilsPlugin" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/NotepadUtilsPlugin.h" />
+        <source-file src="src/ios/NotepadUtilsPlugin.m" />
+    </platform>
+</plugin>
